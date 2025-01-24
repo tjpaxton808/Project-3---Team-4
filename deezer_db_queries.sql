@@ -5,6 +5,7 @@ SELECT a.artist_id
 	,a.number_of_albums
 	,a.fan_to_album_ratio
 	,a.deezer_link
+	,t.entry_key
 	,t.track_id
 	,t.track_title
 	,t.album_name
