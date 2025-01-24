@@ -19,6 +19,7 @@ FROM artists;
 
 
 
+
 --------------- TRACKS DATA TABLE ---------------
 
 -- Drop table if exists
@@ -26,7 +27,8 @@ DROP TABLE IF EXISTS tracks_data;
 
 -- Create new table
 CREATE TABLE tracks_data (
-	track_id BIGINT NOT NULL
+	entry_key INT NOT NULL PRIMARY KEY
+	,track_id BIGINT NOT NULL
 	,track_title VARCHAR NOT NULL
 	,album_name VARCHAR NOT NULL
 	,popularity_rank INT NOT NULL
