@@ -10,7 +10,10 @@ CREATE TABLE "artists" (
     "number_of_fans" int   NOT NULL,
     "number_of_albums" int   NOT NULL,
     "deezer_link" varchar   NOT NULL,
-    "fan_to_album_ratio" dec   NOT NULL
+    "fan_to_album_ratio" dec   NOT NULL,
+    CONSTRAINT "pk_artists" PRIMARY KEY (
+        "artist_id"
+     )
 );
 
 CREATE TABLE "tracks" (
