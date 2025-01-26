@@ -1,6 +1,8 @@
 ﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
+-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+-- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
 CREATE TABLE "artists" (
     "artist_id" int   NOT NULL,
@@ -8,13 +10,11 @@ CREATE TABLE "artists" (
     "number_of_fans" int   NOT NULL,
     "number_of_albums" int   NOT NULL,
     "deezer_link" varchar   NOT NULL,
-    "fan_to_album_ratio" dec   NOT NULL,
-    CONSTRAINT "pk_artists" PRIMARY KEY (
-        "artist_id"
-     )
+    "fan_to_album_ratio" dec   NOT NULL
 );
 
 CREATE TABLE "tracks" (
+    "entry_key" int   NOT NULL,
     "track_id" bigint   NOT NULL,
     "track_title" varchar   NOT NULL,
     "album_name" varchar   NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE "tracks" (
     "artist_id" int   NOT NULL,
     "duration_minute_seconds" time   NOT NULL,
     CONSTRAINT "pk_tracks" PRIMARY KEY (
-        "track_id"
+        "entry_key"
      )
 );
 
