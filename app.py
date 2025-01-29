@@ -21,7 +21,7 @@ def get_cursor():
                         password="5454",
                         host="127.0.0.1",
                         port="5432",
-                        database="spotify_db"
+                        database="deezer_db"
                     )
         cursor = connection.cursor()
         return cursor
