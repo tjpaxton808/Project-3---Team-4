@@ -77,3 +77,7 @@ def track_popularity(count):
     result = cursor.fetchall()
     merged_result = list(chain(*result))
     return jsonify({'top track by popularity rank':merged_result})
+
+# Close the cursor and connection
+cursor.close()
+connection.close()
